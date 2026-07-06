@@ -21,6 +21,9 @@ public:
 	virtual void BeginPlay() override;
 
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	
+	UFUNCTION(BlueprintCallable, Category="Spline Movement")
+	void AddLateralMovement(const float DeltaTime, const FVector2D Direction);
 
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Spline Movement")

@@ -20,6 +20,15 @@ void UAS_SplineMovementComponent::BeginPlay()
 void UAS_SplineMovementComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	
+	//Get Update the spline information
+	//Update the forward of the owner
+	//proses lateral movements
+}
+
+void UAS_SplineMovementComponent::AddLateralMovement(const float DeltaTime, const FVector2D Direction)
+{
+	SplineOffset += Direction;
 }
 
 void UAS_SplineMovementComponent::UpdateSplineVectors()
